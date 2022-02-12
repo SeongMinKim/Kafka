@@ -16,7 +16,6 @@ class KafkaController(
 
     @PostMapping
     fun sendMessage(@RequestParam("message") message: String?): String {
-        println("test")
         producer.sendMessage(message)
         return "Success"
     }
